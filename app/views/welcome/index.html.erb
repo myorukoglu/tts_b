@@ -1,0 +1,26 @@
+
+<h1>Choose a Color!</h1>
+
+<p>
+    <%= link_to "Red", show_color_path(color: "red") %>
+</p>
+
+<p>
+    <%= link_to "Blue", show_color_path(color: "blue") %>
+</p>
+
+<p>
+    <%= link_to "Green", show_color_path(color: "green") %>
+</p>
+
+<p>
+    <%= link_to "Yellow", show_color_path(color: "yellow", greeting: "Hello") %>
+</p>
+
+<%= form_tag show_color_path do %>
+
+    <p><%= text_field_tag :color, nil, placeholder: "What's your color?" %></p>
+    <p><%= submit_tag :submit %></p>
+
+<% end %>
+
