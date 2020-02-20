@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :comments
   resources :posts
   root 'welcome#index'
   get 'show_color' => 'welcome#color'

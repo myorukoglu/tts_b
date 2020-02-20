@@ -49,7 +49,15 @@
   </div>
 </nav>
 <div class="container">
-    <%= yield %>
+<% if notice.present? %>
+  <p class="alert alert-primary"><%= notice %></p>
+<% end %>
+
+<% if alert.present? %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+
+<%= yield %>
 </div>
   </body>
 </html>
